@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHS CS Classes Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="projects" class="bento container">
+        <h2 class="title">
+            Computer Science Classes at Libertyville High School
+        </h2>
+        <div class="bento-grid">
+            <div class="bento-item" id="item-1">
+                <d>DC Computer Science</d>
+                <button class="expand-button" onclick="expandItem('item-1')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 1
+                </div>
+            </div>
+            <div class="bento-item" id="item-2">
+                <d>AP Computer Science Principles</d>
+                <button class="expand-button" onclick="expandItem('item-2')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 2
+                </div>
+            </div>
+            <div class="bento-item" id="item-3">
+                <d>AP Computer Science A</d>
+                <button class="expand-button" onclick="expandItem('item-3')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 3
+                </div>
+            </div>
+            <div class="bento-item" id="item-4">
+                <d>Advanced Topics in Computer Science (Data Structures & Algorithms)</d>
+                <button class="expand-button" onclick="expandItem('item-4')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 4
+                </div>
+            </div>
+            <div class="bento-item" id="item-5">
+                <d>Advanced Topics in Computer Science (Computer Architecture)</d>
+                <button class="expand-button" onclick="expandItem('item-5')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 5
+                </div>
+            </div>
+            <div class="bento-item" id="item-6">
+                <d>Advanced Topics in Computer Science (Independent Study)</d>
+                <button class="expand-button" onclick="expandItem('item-6')">
+                    <img src="84460.png" alt="Expand" />
+                </button>
+                <div class="content">
+                    description 6
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function expandItem(itemId) {
+            const item = document.getElementById(itemId);
+            item.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>

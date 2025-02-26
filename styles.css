@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    background: url('bulletin-board-png-6.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensure the background image covers the entire background */
+}
+
+body.no-scroll {
+    overflow: hidden; /* Ensure body does not scroll when an item is expanded */
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 30px;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+}
+
+.bento-item {
+    padding: 30px;
+    background-color: #d8eff0;
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    width: calc(50% - 15px); /* Adjust width to fit two columns with gap */
+    height: calc(33.33% - 20px); /* Adjust height to fit three rows with gap */
+    transition: all 0.5s ease-in-out;
+    transform-origin: bottom right; /* Expand from the bottom right corner */
+    transform: scale(1); /* Initial scale */
+}
+
+.bento-item:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 25vh;
+}
+
+.bento-item:nth-child(2) {
+    top: 0;
+    left: calc(50% + 15px);
+    width: 25vw;
+    height: 25vh;
+}
+
+.bento-item:nth-child(3) {
+    top: calc(33.33% + 20px);
+    left: 0;
+    width: 25vw;
+    height: 25vh;
+}
+
+.bento-item:nth-child(4) {
+    top: calc(33.33% + 20px);
+    left: calc(50% + 15px);
+    width: 25vw;
+    height: 25vh;
+}
+
+.bento-item:nth-child(5) {
+    top: calc(66.66% + 40px);
+    left: 0;
+    width: 25vw;
+    height: 25vh;
+}
+
+.bento-item:nth-child(6) {
+    top: calc(66.66% + 40px);
+    left: calc(50% + 15px);
+        width: 25vw;
+    height: 25vh;
+}
+
+.bento-item .content {
+    display: none; /* Hide content by default */
+    padding-top: 20px;
+}
+
+.bento-item.expanded .content {
+    display: block; /* Show content when expanded */
+}
+
+.bento-item.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    padding: 50px;
+    font-size: 24px;
+    overflow: auto; /* Allow scrolling within the expanded item */
+    transform: scale(1); /* Scale up to full size */
+}
+
+.expand-button {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.expand-button img {
+    width: 20px;
+    height: 20px;
+}
