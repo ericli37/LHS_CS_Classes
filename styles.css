@@ -114,7 +114,6 @@ body.no-scroll {
 }
 
 .bento-item.expanded {
-    background-color: aliceblue;
     .expand-button {
         position: absolute;
         bottom: 200px;
@@ -132,8 +131,27 @@ body.no-scroll {
     z-index: 1000;
     padding: 50px;
     font-size: 24px;
-    overflow: auto; /* Allow scrolling within the expanded item */
-    transform: scale(1); /* Scale up to full size */
+    overflow: auto;
+    transform: scale(1);
+}
+
+.bento-item:nth-child(1).expanded {
+    background-color: #f1f1f1;
+}
+.bento-item:nth-child(2).expanded {
+    background-color: #fcf9f3;
+}
+.bento-item:nth-child(3).expanded {
+    background-color: #a8d199;
+}
+.bento-item:nth-child(4).expanded {
+    background-color: #f4d372;
+}
+.bento-item:nth-child(5).expanded {
+    background-color: #fcf9f4;
+}
+.bento-item:nth-child(6).expanded {
+    background-color: #f9f5d2;
 }
 
 .expand-button {
